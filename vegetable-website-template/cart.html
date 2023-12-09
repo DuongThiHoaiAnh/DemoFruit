@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Fruitables - Vegetable Website</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            @-webkit-keyframes snowflakes-fall {
+              0% {top:-10%}
+              100% {top:100%}
+            }
+            @-webkit-keyframes snowflakes-shake {
+              0%,100% {-webkit-transform:translateX(0);transform:translateX(0)}
+              50% {-webkit-transform:translateX(80px);transform:translateX(80px)}
+            }
+            @keyframes snowflakes-fall {
+              0% {top:-10%}
+              100% {top:100%}
+            }
+            @keyframes snowflakes-shake {
+              0%,100%{ transform:translateX(0)}
+              50% {transform:translateX(80px)}
+            }
+            .snowflake {
+              color: #fff;
+              font-size: 1em;
+              font-family: Arial, sans-serif;
+              text-shadow: 0 0 5px #000;
+              position:fixed;
+              top:-10%;
+              z-index:9999;
+              -webkit-user-select:none;
+              -moz-user-select:none;
+              -ms-user-select:none;
+              user-select:none;
+              cursor:default;
+              -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+              -webkit-animation-duration:10s,3s;
+              -webkit-animation-timing-function:linear,ease-in-out;
+              -webkit-animation-iteration-count:infinite,infinite;
+              -webkit-animation-play-state:running,running;
+              animation-name:snowflakes-fall,snowflakes-shake;
+              animation-duration:10s,3s;
+              animation-timing-function:linear,ease-in-out;
+              animation-iteration-count:infinite,infinite;
+              animation-play-state:running,running;
+            }
+            .snowflake:nth-of-type(0){
+              left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
+            }
+            .snowflake:nth-of-type(1){
+              left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
+            }
+            .snowflake:nth-of-type(2){
+              left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
+            }
+            .snowflake:nth-of-type(3){
+              left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
+            }
+            .snowflake:nth-of-type(4){
+              left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
+            }
+            .snowflake:nth-of-type(5){
+              left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+            }
+            .snowflake:nth-of-type(6){
+              left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+            }
+            .snowflake:nth-of-type(7){
+              left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
+            }
+            .snowflake:nth-of-type(8){
+              left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
+            }
+            .snowflake:nth-of-type(9){
+              left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
+            }
+            .snowflake:nth-of-type(10){
+              left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s
+            }
+            .snowflake:nth-of-type(11){
+              left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
+            }
+          </style>
+
+<style>
+    html,body{cursor:url("https://1.bp.blogspot.com/-qbWo9mPKO2Y/YL9utYdQBdI/AAAAAAAAFs4/mtjGu6u2uGwtJsT4gZG4lbhLV1a5lG6OQCLcBGAsYHQ/s0/mouse-f1.png"), auto;}
+    a:hover{cursor:url("https://1.bp.blogspot.com/-nYv2dLl3oXY/YL9utYBCh8I/AAAAAAAAFtA/wII4lVw5w4k-4isGMY41heTqk8U4TJujgCLcBGAsYHQ/s0/mouse-f2.png"), auto;}
+</style>
+    </head>
+
+    <br>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar bg-primary d-none d-lg-block">
+                <div class="d-flex justify-content-between">
+                    <div class="top-info ps-2">
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">An Duong Vuong, TP.HCM, Viet Nam</a></small>
+                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="mailto:groupaaa999@gmail.com" class="text-white">groupaaa999@gmail.com</a></small>
+                    </div>
+                    <div class="top-link pe-2">
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="shop.html" class="nav-item nav-link">Shop</a>
+                            <a href="shop-detail.html" class="nav-item nav-link">About Us</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="cart.html" class="dropdown-item">Cart</a>
+                                    <a href="chackout.html" class="dropdown-item">Chackout</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="game.html" class="nav-item nav-link">Game</a>
+
+                        </div>
+                        <div class="d-flex m-3 me-0">
+                            <a href="#" class="position-relative me-4 my-auto">
+                                <i class="fa fa-shopping-bag fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+        <div class="snowflakes" aria-hidden="true">
+          <div class="snowflake">🍊</div>
+          <div class="snowflake">🍉</div>
+          <div class="snowflake">🍇</div>
+          <div class="snowflake">🥦</div>
+          <div class="snowflake">🍓</div>
+          <div class="snowflake">🍌</div>
+          <div class="snowflake">🍑</div>
+          <div class="snowflake">🍋</div>
+          <div class="snowflake">🍎</div>
+          <div class="snowflake">🥔</div>
+          <div class="snowflake">🍅</div>
+          <div class="snowflake">🥬</div>
+        </div>
+
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5">
+            <h1 class="text-center text-white display-6">Cart</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item active text-white">Cart</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
+
+        <!-- Cart Page Start -->
+        <div class="container-fluid py-5 ">
+            <div class="container py-5">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr class="column-labels">
+                            <th scope="col" class="product-image">Products</th>
+                            <th scope="col" class="product-details">Name</th>
+                            <th scope="col" class="product-price">Price ($)</th>
+                            <th scope="col" class="product-quantity">Quantity</th>
+                            <th scope="col" class="product-line-price">Total</th>
+                            <th scope="col" class="product-removal">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+
+
+
+
+                            <tr class="product">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center product-image">
+                                        <img src="img/vegetable-item-3.png" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4 product-title">Big Banana</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4 product-price">2.19</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <!--<div class="input-group-btn product-quantity">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>-->
+                                        <div class="product-quantity">
+                                            <input type="number" value="2" min="1">
+                                          </div>                                        
+                                        <!--<div class="input-group-btn product-quantity">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="product-line-price mb-0 mt-4">4.38</div>
+                                </td>
+                                <td class="product-removal">
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4 remove-product" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            
+                            </tr>
+
+
+
+
+
+
+
+
+                            <tr class="product">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/vegetable-item-5.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4 product-details">Potatoes</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4 product-price">2.35</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <!--<div class="input-group-btn product-quantity">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>-->
+                                        <div class="product-quantity">
+                                            <input type="number" value="1" min="1">
+                                          </div>                                        
+                                        <!--<div class="input-group-btn product-quantity">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="product-line-price mb-0 mt-4">2.35</p>
+                                </td>
+                                <td class="product-removal">
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4 remove-product" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+                            <tr class="product">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/vegetable-item-2.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4">Awesome Brocoli</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4 product-price">2.99</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <!--<div class="input-group-btn product-quantity">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>-->
+                                        <div class="product-quantity">
+                                            <input type="number" value="2" min="1">
+                                          </div>                                        
+                                        <!--<div class="input-group-btn product-quantity">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>-->
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="product-line-price mb-0 mt-4">5.98</p>
+                                </td>
+                                <td class="product-removal">
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4 remove-product" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-5">
+                    <input type="text" class="border-0 border-bottom rounded me-5 py-3 mb-4" placeholder="Coupon Code">
+                    <button class="btn border-secondary rounded-pill px-4 py-3 text-primary" type="button">Apply Coupon</button>
+                </div>
+                <div class="row g-4 justify-content-end">
+                    <div class="col-8"></div>
+
+
+
+                    <div class="totals col-sm-8 col-md-7 col-lg-6 col-xl-4">
+                        <div class="bg-light rounded">
+                            <div class="p-4">
+
+                                <h1 class="display-6 mb-4">Cart <span class="fw-normal">Total</span></h1>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <h5 class="totals-item mb-0 me-4">Subtotal ($) :</h5 >
+                                        <div class="mb-0 totals-value" id="cart-subtotal">12.71</div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="mb-0 me-4 totals-item">Shipping ($) :</h5>
+                                    <div class="totals-value" id="cart-shipping">
+                                        3.00
+                                    </div>
+                                </div>
+                                <p class="mb-0 text-end">Shipping to Ukraine.</p>
+                            </div>
+                            <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between" class="totals-item totals-item-total">
+                                <h5 class="mb-0 ps-4 me-4">Total ($) :</h5>
+                                <div class="mb-0 pe-4 totals-value" id="cart-total">15.71</div>
+                            </div>
+                            <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" class="checkout" type="button">
+                                <a href="./chackout.html">Proceed Checkout</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Start -->
+
+
+
+
+
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            <a href="#">
+                                <h1 class="text-primary mb-0">Fruitables</h1>
+                                <p class="text-secondary mb-0">Fresh products</p>
+                            </a>
+                        </div>
+                        <!--<div class="col-lg-6">
+                            <div class="position-relative mx-auto">
+                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
+                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex justify-content-end pt-3">
+                                <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Shop Info</h4>
+                            <a class="btn-link" href="./shop-detail.html">About Us</a>
+                            <a class="btn-link" href="./contact.html">Contact Us</a>
+                            <a class="btn-link" href="">FAQs & Help</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Account</h4>
+                            <a class="btn-link" href="./cart.html">Shopping Cart</a>
+                            <a class="btn-link" href="">International Orders</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>Address: An Duong Vuong, TP.HCM, Viet Nam</p>
+                            <p><a href="mailto:groupaaa999@gmail.com" class="text-white">groupaaa999@gmail.com</a></p>
+                            <p>Phone: 0363 572 964</p>
+                            <p>Payment Accepted</p>
+                            <img src="img/payment.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Home</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom" href="#">AAA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
